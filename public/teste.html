@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Teste - Widget SKIP</title>
+
+    <!-- Script do embed - carregado sem defer pra testar -->
+    <script>
+      // Sem apiUrl de proposito: o embed-sdk.js ja aponta para o backend certo.
+      // window.location.origin aqui seria o host do frontend, que devolve 405.
+      window.__SKIP_AGENT_CONFIG__ = {
+        agentId: 'support-agent',
+        primaryColor: '#0891B2',
+        agentName: 'Assistente da Clinica',
+        position: 'bottom-right',
+      }
+    </script>
+    <script src="/embed-sdk.js"></script>
+
+    <style>
+      body {
+        font-family: system-ui, sans-serif;
+        padding: 40px;
+        max-width: 600px;
+        margin: 0 auto;
+        background: #f5f5f5;
+      }
+      h1 {
+        color: #0891b2;
+      }
+      .card {
+        background: white;
+        padding: 24px;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <h1>🏥 Teste do Widget</h1>
+      <p>O widget deve aparecer no canto inferior direito desta página.</p>
+      <p>Se não aparecer, verifique o console do navegador (F12).</p>
+    </div>
+  </body>
+</html>
